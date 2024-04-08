@@ -16,16 +16,13 @@ const BookList = () => {
 const Book = () => {
   return (
    <article className="book">
-     <Image />
-     <Title />
-     <Author />
+     <img src="./images/book-1.jpg" alt="The Women: A Novel" />
+     <h2>The Women: A Novel </h2>
+     <h4>Kristin Hannah</h4>
    </article> 
   )
 }
 
-const Image = () => <img src="./images/book-1.jpg" alt="The Women: A Novel" />
-const Title = () => <h2>The Women: A Novel </h2>
-const Author = () => <h4 style={{color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem"}}>Kristin Hannah</h4>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList />);
