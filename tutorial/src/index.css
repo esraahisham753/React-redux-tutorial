@@ -16,6 +16,7 @@ body {
     margin: 5rem auto;
     display: grid;
     gap: 2rem;
+    align-items: start;
 }
 
 
@@ -48,6 +49,10 @@ body {
     font-size: 0.75rem;
     margin-top: 0.25rem;
     letter-spacing: 2px;
+}
+
+.book p {
+    margin: 1rem 0 0.5rem;
 }
 
 
