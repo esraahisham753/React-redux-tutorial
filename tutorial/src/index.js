@@ -6,37 +6,34 @@ const books = [
   {
   author: "Kristin Hannah",
   title: "The Women: A Novel",
-  img: "./images/book-1.jpg"
+  img: "./images/book-1.jpg",
+  id: 1
   },
   {
   author: 'Jonathan Haidt',
   title: 'The Anxious Generation',
-  img: 'https://m.media-amazon.com/images/I/81XP4hEXDXL._SY425_.jpg'
+  img: 'https://m.media-amazon.com/images/I/81XP4hEXDXL._SY425_.jpg',
+  id: 2
   }
 
-]
-
-
-const names = ["john", "peter", "susan"];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>
-});
-
-console.log(newNames);
+];
 
 const BookList = () => {
   return (
     <section className="booklist">
-     {names.map((name) => {
-        return <h1>{name}</h1>
-    })}
+     {
+      books.map((book) => {
+        console.log(book);
+
+        return <Book book={book} key={book.id}/>
+      })
+     }
     </section>  
   )  
 }
 
 const Book = (props) => {
-  const { author, title, img} = props;
-  console.log(props);
+  const { author, title, img} = props.book;
 
   return (
    <article className="book">
