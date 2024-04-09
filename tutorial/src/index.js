@@ -21,19 +21,32 @@ const books = [
 const BookList = () => {
   return (
     <section className="booklist">
+     <EventExample />
      {
       books.map((book) => {
         console.log(book);
 
-        return <Book book={book} key={book.id}/>
+        return <Book {...book} key={book.id}/>
       })
      }
     </section>  
   )  
 }
 
+const EventExample = () => {
+  return (
+    <section>
+      <form>
+        <h2>Typical Form</h2>
+        <input type="text" name="eventexample" style={{margin: '1rem 0'}} />
+      </form>
+      <button>Click Me</button>
+    </section>
+  )
+}
+
 const Book = (props) => {
-  const { author, title, img} = props.book;
+  const { author, title, img} = props;
 
   return (
    <article className="book">
