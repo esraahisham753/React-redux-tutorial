@@ -1,5 +1,14 @@
+import { useState } from "react";
+import { data } from "../../../data";
+
 const UseStateArray = () => {
-  return <h2>useState array example</h2>;
+  const [data, setData] = useState(data);
+
+  return (
+    <section className="data">
+      <ul className="data__list"></ul>
+    </section>
+  );
 };
 
 export default UseStateArray;

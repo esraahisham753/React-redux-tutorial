@@ -5,11 +5,14 @@ const UseStateBasics = () => {
 
   const handleClick = () => {
     setCount(count + 1);
-  }
+  };
 
   return (
     <section>
-      
+      <h2>You clicked {count} times</h2>
+      <button type="button" className="btn" onClick={handleClick}>
+        Click Me
+      </button>
     </section>
   );
 };
