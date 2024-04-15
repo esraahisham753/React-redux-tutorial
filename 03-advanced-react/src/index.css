@@ -373,3 +373,21 @@ ul {
 .card img {
   border-radius: 50%;
 }
+
+.card__info {
+  text-align: left;
+}
+
+.card__info a {
+  color: var(--grey-600);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.user__name {
+  margin-bottom: 2rem;
+}
+
+.user p {
+  font-size: 1.5rem;
+}
