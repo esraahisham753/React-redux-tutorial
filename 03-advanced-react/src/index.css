@@ -352,3 +352,24 @@ ul {
   display: block;
   margin: 0.5rem auto;
 }
+
+.cards {
+  padding: 5rem;
+}
+
+.cards__title {
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 3rem 25%;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  border-radius: 1rem;
+}
+.card img {
+  border-radius: 50%;
+}
