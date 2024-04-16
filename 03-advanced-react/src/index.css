@@ -384,10 +384,21 @@ ul {
   font-weight: 600;
 }
 
+.user__avatar {
+  margin: 3rem auto;
+  display: block;
+  border-radius: 10px;
+}
+
 .user__name {
   margin-bottom: 2rem;
 }
 
 .user p {
   font-size: 1.5rem;
+  margin: 0.3rem 0;
+}
+
+.user .user__bio {
+  margin-bottom: 3rem;
 }
