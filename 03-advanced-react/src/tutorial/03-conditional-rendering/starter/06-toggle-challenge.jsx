@@ -1,5 +1,19 @@
+import { useState } from "react";
+
 const ToggleChallenge = () => {
-  return <h2>toggle challenge</h2>;
+  const [visible, setVisible] = useState(true);
+
+  const handleButtonClick = () => {
+    setVisible((currentState) => {
+      return !currentState;
+    });
+  };
+
+  return (
+    <button className="btn" onClick={handleButtonClick}>
+      {visible ? "Hide" : "Show"}
+    </button>
+  );
 };
 
 export default ToggleChallenge;
