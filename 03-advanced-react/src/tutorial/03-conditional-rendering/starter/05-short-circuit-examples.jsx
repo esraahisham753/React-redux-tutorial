@@ -8,7 +8,17 @@ const ShortCircuitExamples = () => {
   const [user, setUser] = useState({ name: 'john' });
   const [isEditing, setIsEditing] = useState(false);
 
-  return <h2>short circuit - examples</h2>;
+  return (
+    <div>
+      <h4>{text || 'Default Value'}</h4>
+      {
+        !text && <div>
+          <h4>Whatever returned</h4>
+          <h4>{name}</h4>
+        </div>
+      }
+    </div>
+  );
 };
 
 export default ShortCircuitExamples;
