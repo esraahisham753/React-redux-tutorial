@@ -8,7 +8,9 @@ const UserChallenge = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newId = users[users.length - 1].id + 1;
+    if (!name) return;
+
+    const newId = users ? users[users.length - 1].id + 1 : 1;
 
     setUsers((currentState) => {
       return [...currentState, { id: newId, name: name }];
@@ -45,6 +47,7 @@ const UserChallenge = () => {
         </button>
       </form>
       <div className="people">
+        <h2>Users</h2>
         {users.map((person) => (
           <div className="person" key={person.id}>
             <h4>{person.name}</h4>
