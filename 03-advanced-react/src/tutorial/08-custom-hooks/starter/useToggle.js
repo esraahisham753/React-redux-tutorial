@@ -7,5 +7,7 @@ const useToggle = (defaultValue) => {
     setShow((currentState) => !currentState);
   };
 
-  return [show, toggle];
+  return {show, toggle};
 };
+
+export default useToggle;
