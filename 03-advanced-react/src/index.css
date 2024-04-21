@@ -402,3 +402,32 @@ ul {
 .user .user__bio {
   margin-bottom: 3rem;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar__link a{
+  color: #464242;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navbar__link--brand a {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar__user span {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
