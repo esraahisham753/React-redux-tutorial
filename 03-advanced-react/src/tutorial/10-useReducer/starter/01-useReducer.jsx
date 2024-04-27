@@ -1,30 +1,23 @@
 import React, { useReducer } from "react";
-import { data, people } from "../../../data";
+import { data} from "../../../data";
+
+import reducer from "./reducer";
+import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM } from "./actions";
 
 const defaultState = {
   people: data,
   isLoading: false,
 };
 
-const CLEAR_LIST = 'CLEAR_LIST';
-const RESET_LIST = 'RESET_LIST';
-const REMOVE_ITEM = 'REMOVE_ITEM';
-
-const reducer = (state, action) => {
-  if (action.type === CLEAR_LIST) {
-    return { ...state, people: [] };
-  }
-
-  throw new Error(`No matching ${action.type} - action type`);
-};
-
 const ReducerBasics = () => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
-  const removeItem = (id) => {};
+  const removeItem = (id) => {
+    dispatch({type: REMOVE_ITEM, payload: {id}});
+  };
 
   const resetItems = () => {
-    dispatch({type: 'do something'});
+    dispatch({type: RESET_LIST});
   };
 
   const clearList = () => dispatch({ type: CLEAR_LIST });
