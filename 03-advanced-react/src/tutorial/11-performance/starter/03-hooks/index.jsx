@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { data } from "../../../../data";
 import List from "./List";
 const LowerState = () => {
   const [people, setPeople] = useState(data);
   const [count, setCount] = useState(0);
 
-  const removePerson = (id) => {
+  const removePerson = useCallback((id) => {
     setPeople((currentState) => {
       const newPeople = currentState.filter((person) => person.id !== id);
 
       return newPeople;
     });
-  };
+  }, []);
 
   return (
     <section>
@@ -21,7 +21,7 @@ const LowerState = () => {
         style={{ marginBottom: "1rem" }}>
         count {count}
       </button>
-      <List people={people} removePerson={removePerson}/>
+      <List people={people} removePerson={removePerson} />
     </section>
   );
 };
