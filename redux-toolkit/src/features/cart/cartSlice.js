@@ -8,7 +8,7 @@ const initialState = {
   isLoading: true,
 };
 
-const url = "https://www.course-api.com/react-useReducer-cart-projecte";
+const url = "https://www.course-api.com/react-useReducer-cart-project";
 
 export const getCartItems = createAsyncThunk(
   "cart/get-cart-items",
@@ -59,21 +59,18 @@ const cartSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getCartItems.pending, (state) => {});
-  },
-  extraReducers: {
-    [getCartItems.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [getCartItems.fulfilled]: (state, action) => {
-      //console.log(action);
-      state.cart = action.payload;
-      state.isLoading = false;
-    },
-    [getCartItems.rejected]: (state, action) => {
-      state.isLoading = false;
-      console.log(action);
-    },
+    builder
+      .addCase(getCartItems.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getCartItems.fulfilled, (state, action) => {
+        state.cart = action.payload;
+        state.isLoading = false;
+      })
+      .addCase(getCartItems.rejected, (state, action) => {
+        state.isLoading = false;
+        console.log(action);
+      });
   },
 });
 
