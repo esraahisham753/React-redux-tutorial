@@ -248,7 +248,7 @@ Cart Item
   transition: var(--transition);
 }
 .remove-btn:hover {
-  color: var(--clr-primary-light);
+  color: white;
 }
 .amount-btn {
   width: 24px;
